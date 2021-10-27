@@ -26,3 +26,6 @@ if (document.querySelector('.home-reviews .swiper')) {
     }
   });
 }
+
+/* #GSAP Animations
+================================================== */
