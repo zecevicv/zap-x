@@ -34,12 +34,24 @@ gsap.registerPlugin(ScrollTrigger);
 // Banner
 if (document.querySelector('.home-banner')) {
   let tl = gsap.timeline();
-
-  tl.from('.home-banner .img', {
+  tl.from('.home-banner .text > *', {
+    opacity: 0,
+    yPercent: 50,
+    duration: .5,
+    delay: 1,
+    ease: Power1.easeOut,
+    stagger:{ each: .2 },
+    scrollTrigger: {
+      trigger: ".home-banner",
+      start: "0 80%",
+    }, 
+  }).from('.home-banner .img img', {
     opacity: 0,
     duration: 1,
-    delay: 1,
-    ease: Power1.easeInOut,
+    scale: .85,
+    ease: Power1.easeOut,
+    delay: .15,
+    stagger:{ each: .2 },
     scrollTrigger: {
       trigger: ".home-banner",
       start: "0 80%",
@@ -49,7 +61,8 @@ if (document.querySelector('.home-banner')) {
 
 // Service
 if (document.querySelector('.home-services')) {
-  gsap.from('.home-services .swiper-slide', {
+  let tl = gsap.timeline();
+  tl.from('.home-services .swiper-slide', {
     yPercent: -25,
     opacity: 0,
     duration: .5,
@@ -59,34 +72,100 @@ if (document.querySelector('.home-services')) {
       trigger: ".home-services .swiper",
       start: "0 80%",
     }, 
+  }).from('.home-services .text > *', {
+    opacity: 0,
+    yPercent: 100,
+    duration: .5,
+    ease: Power1.easeOut,
+    stagger:{ each: .4 },
+  }).from('.home-services .img li', {
+    scale: 0,
+    opacity: 0,
+    duration: 1.5,
+    delay: .25,
+    ease: Elastic.easeOut.config(1, 0.85),
+  });
+
+  ScrollTrigger.create({
+    trigger: ".home-services",
+    animation: tl,
+    start: "0 80%",
   });
 }
 
 // Reviews
 if (document.querySelector('.home-reviews')) {
-  gsap.from('.home-reviews .swiper-slide', {
+  let tl = gsap.timeline();
+  tl.from('.home-reviews .text > *', {
+    opacity: 0,
+    yPercent: 100,
+    duration: .5,
+    delay: .5,
+    ease: Power1.easeOut,
+    stagger:{ each: .2 },
+  }).from('.home-reviews .swiper-slide', {
     yPercent: -25,
     opacity: 0,
     duration: .4,
     ease: Power1.easeInOut,
     stagger:{ each: 0.15, from: 'right' },
-    scrollTrigger: {
-      trigger: ".home-reviews",
-      start: "0 80%",
-    }, 
+  }).from('.home-reviews .swiper-pagination', {
+    opacity: 0,
+    duration: .4,
+    ease: Power1.easeInOut,
+    delay: .5
+  }, '<');
+
+  ScrollTrigger.create({
+    trigger: ".home-reviews",
+    animation: tl,
+    start: "0 80%",
   });
 }
 
 // Steps
 if (document.querySelector('.home-steps')) {
   gsap.from('.home-steps .step', {
-    scale: .75,
+    scale: .9,
     opacity: 0,
     duration: .5,
+    rotate: 5,
     ease: Power1.easeInOut,
     stagger:{ each: 0.25, from: 'right' },
     scrollTrigger: {
-      trigger: ".home-steps",
+      trigger: ".home-steps .steps",
+      scrub: 1,
+      start: '0 90%',
+      end: '100% 70%',
+    }, 
+  });
+}
+
+// Action
+if (document.querySelector('.home-action')) {
+  gsap.from('.home-action .container > *', {
+    opacity: 0,
+    yPercent: 100,
+    duration: .5,
+    ease: Power1.easeOut,
+    stagger:{ each: .15 },
+    scrollTrigger: {
+      trigger: ".home-action .container",
+      start: "0 80%",
+    }, 
+  });
+}
+
+// Contact
+if (document.querySelector('.home-contact')) {
+  gsap.from('.home-contact input', {
+    opacity: 0,
+    xPercent: 100,
+    duration: .5,
+    ease: Power1.easeOut,
+    stagger:{ each: .15 },
+    scrollTrigger: {
+      trigger: ".home-contact form",
       start: "0 80%",
     }, 
   });
