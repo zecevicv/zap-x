@@ -38,7 +38,7 @@ if (document.querySelector('.home-banner')) {
     opacity: 0,
     yPercent: 50,
     duration: .5,
-    delay: 1,
+    delay: .5,
     ease: Power1.easeOut,
     stagger:{ each: .2 },
     scrollTrigger: {
@@ -50,7 +50,6 @@ if (document.querySelector('.home-banner')) {
     duration: 1,
     scale: .85,
     ease: Power1.easeOut,
-    delay: .15,
     stagger:{ each: .2 },
     scrollTrigger: {
       trigger: ".home-banner",
