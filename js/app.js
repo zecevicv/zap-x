@@ -1,3 +1,24 @@
+/* #Header
+    ======================================================= */
+const header = document.querySelector('.header');
+
+// Scroll BG Color change
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('header-purple');
+    } else {
+      header.classList.remove('header-purple');
+    }
+  });
+
+  if (window.scrollY > 0) {
+    header.classList.add('header-purple');
+  } else {
+    header.classList.remove('header-purple');
+  }
+}
+
 /* #Home Services
 ================================================== */
 if (document.querySelector('.home-services .swiper')) {
