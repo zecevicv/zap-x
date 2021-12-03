@@ -1228,3 +1228,143 @@ body {
     margin-bottom: 6.6666vw;
   }
 }
+
+/* #Blog
+================================================== */
+.blog {
+  background-image: url('../img/blog/bg.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #F1F4F5;
+  padding: 7vw 0 3.125vw 0;
+}
+
+.blog .container {
+  width: 82%;
+}
+
+.blog h1 {
+  text-align: center;
+  margin-bottom: 1.5vw;
+}
+
+/* Tab Navigation */
+.blog .tab-navigation {
+  margin-bottom: 3.125vw;
+}
+
+.blog .tab-navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog .tab-navigation ul li:not(:last-child) {
+  margin-left: 2.6vw;
+}
+
+.blog .tab-btn {
+  border-bottom: 2px solid transparent;
+}
+
+.blog .tab-btn.active {
+  font-weight: 700;
+  border-bottom: 2px solid #0BFAC8;
+}
+
+/* Blog Posts */
+.blog-posts ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.17vw;
+}
+
+.blog-posts ul li {
+  flex: 0 0 33.33333%;
+  padding: 0 1.17vw;
+  margin-bottom: 3.125vw;
+}
+
+.blog-post-card > div {
+  border-bottom: 2px solid black;
+}
+
+.blog-post-card .img img {
+  width: 100%;
+}
+
+.blog-post-card .text {
+  padding: 1.3vw 0;
+}
+
+.blog-post-card h2 {
+  width: 75%;
+  line-height: 1.1;
+}
+
+.blog-post-card p {
+  margin: .75vw 0 1.5vw 0;
+  line-height: 1.44;
+}
+
+.blog-post-card a {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-card a img {
+  width: 1.5vw;
+  margin-right: 1vw;
+}
+
+@media (max-width: 1023.98px) {
+  .blog {
+    padding: 26.66vw 0 5.33vw 0;
+  }
+  
+  .blog .container {
+    width: 90%;
+  }
+  
+  .blog h1 {
+    margin-bottom: 6vw;
+  }
+  
+  /* Tab Navigation */
+  .blog .tab-navigation {
+    margin-bottom: 6vw;
+  }
+  
+  .blog .tab-navigation ul li:not(:last-child) {
+    margin-left: 6.66vw;
+  }
+  
+  /* Blog Posts */
+  .blog-posts ul {
+    display: block;
+    margin: 0;
+  }
+  
+  .blog-posts ul li {
+    padding: 0;
+    margin-bottom: 8vw;
+  }
+  
+  .blog-post-card .text {
+    padding: 6.66vw 0 4vw 0;
+  }
+  
+  .blog-post-card h2 {
+    width: 100%;
+  }
+  
+  .blog-post-card p {
+    margin: 4vw 0 6vw 0;
+  }
+  
+  .blog-post-card a img {
+    width: 5vw;
+    margin-right: 2.8vw;
+  }
+}
