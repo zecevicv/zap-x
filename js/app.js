@@ -218,6 +218,20 @@ if (document.querySelector('.home-portfolio')) {
         });
       }
     });
-  }
-  
+  } 
+}
+
+/* #Blog Post Slider
+================================================== */
+if (document.querySelector('.blog-post-slider .swiper')) {
+  new Swiper(".blog-post-slider .swiper", {
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
 }
