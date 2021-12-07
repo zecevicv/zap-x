@@ -256,3 +256,21 @@ if (document.querySelector('.blog-post-slider .swiper')) {
     }
   });
 }
+
+/* #Price Extras
+================================================== */
+if (document.querySelector('.price-extras .swiper')) {
+  new Swiper(".price-extras .swiper", {
+    pagination: {
+      el: ".price-extras .swiper-pagination",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+}

@@ -301,24 +301,24 @@ h6 {
 
 /* #Accordion
 ================================================== */
-.accordion .simbol .minus {
+.collapsible > .collapse-toggler .simbol .minus {
   display: none;
 }
 
-.accordion .show .simbol .minus {
+.collapsible.show > .collapse-toggler .simbol .minus {
   display: block;
 }
 
-.accordion .show .simbol .plus {
+.collapsible.show > .collapse-toggler .simbol .plus {
   display: none;
 }
 
-.accordion .collapse {
+.collapse {
   overflow: hidden;
   height: 0;
 }
 
-.accordion .collapse-toggler {
+.collapse-toggler {
   cursor: pointer;
   user-select: none;
 }
