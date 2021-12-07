@@ -280,7 +280,7 @@ if (document.querySelector('.price-extras .swiper')) {
 let scrollPos = 0;
 const priceSticky = document.querySelector('.price-sticky-desktop');
 
-if (priceSticky) {
+if (priceSticky && window.innerWidth > 1023) {
   window.addEventListener('scroll', (e) => {
     if (window.scrollY > 600) {
       priceSticky.classList.add('show');
