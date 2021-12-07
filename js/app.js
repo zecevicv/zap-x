@@ -274,3 +274,25 @@ if (document.querySelector('.price-extras .swiper')) {
     }
   });
 }
+
+/* #Price Sticky Desktop
+================================================== */
+let scrollPos = 0;
+const priceSticky = document.querySelector('.price-sticky-desktop');
+
+if (priceSticky) {
+  window.addEventListener('scroll', (e) => {
+    if (window.scrollY > 600) {
+      priceSticky.classList.add('show');
+    } else {
+      priceSticky.classList.remove('show');
+    }
+  
+    // if (window.scrollY == 0) {
+    //   header.classList.remove('hide-top');
+    //   header.classList.remove('show-bottom');
+    // }
+  
+    scrollPos = (document.body.getBoundingClientRect()).top;
+  });
+}

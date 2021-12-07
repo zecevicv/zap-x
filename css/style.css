@@ -35,6 +35,10 @@ body {
   color: #FF0000;
 }
 
+.text-gray {
+  color: #CBCBCB;
+}
+
 /* #Btn & Link
 ================================================== */
 .btn {
@@ -2063,6 +2067,186 @@ body {
   background-color: #F1F4F5;
 }
 
+.price-desktop .container {
+  width: 78%;
+  margin-top: -8.05vw;
+  position: relative;
+  z-index: 1;
+}
+
+/* Package Headers */
+.price-desktop .package-headers .packages {
+  display: flex;
+}
+
+.price-desktop .package-headers .packages > * {
+  flex: 0 0 20%;
+}
+
+.price-desktop .package-headers .package {
+  background-color: white;
+}
+
+.price-desktop .package-headers .package:not(:last-child) {
+  border-left: 1px solid #E5E5E5;
+}
+
+/* Top */
+.price-desktop .package-top {
+  text-align: center;
+  padding: .5vw 0;
+}
+
+.price-desktop .package-top p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-desktop .package-top img {
+  width: 1.25vw;
+  margin-right: .5vw;
+}
+
+/* Name */
+.price-desktop .package-name {
+  text-align: center;
+  line-height: 1;
+  padding: 1.3vw 0;
+  position: relative;
+}
+
+.price-desktop .package-name.bg-green {
+  background-image: linear-gradient(to top right, #03FDC5, #52D8E4);
+}
+
+.price-desktop .package-name.bg-purple {
+  color: white;
+  background-color: #870AA1;
+}
+
+.price-desktop .package-name .label {
+  color: black;
+  background-color: white;
+  border-radius: 500px;
+  padding: .25vw 1vw;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .16);
+}
+
+/* Price */
+.price-desktop .package-price {
+  text-align: center;
+  line-height: 1.1;
+  padding: 1.3vw 0 2.34vw 0;
+  min-height: 9.2vw;
+}
+
+.price-desktop .package-price .text-red {
+  margin-bottom: .25vw;
+}
+
+/* Btns */
+.price-desktop .package-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-desktop .package-btns .btn {
+  width: 11.45vw;
+  padding: 0;
+}
+
+.price-desktop .package-btns .btn:first-child {
+  margin-bottom: 1vw;
+}
+
+/* Features */
+.price-desktop .package-features {
+  padding: 2vw 0;
+  width: 11.45vw;
+  margin: 0 auto;
+  line-height: 1;
+}
+
+.price-desktop .package-features li {
+  display: flex;
+  align-items: center;
+}
+
+.price-desktop .package-features li:not(:last-child) {
+  margin-bottom: 1vw;
+}
+
+.price-desktop .package-features img {
+  width: .75vw;
+  margin-left: .6vw;
+}
+
+/* Accordions */
+.price-desktop .package-accordions {
+  padding-top: 3.125vw;
+}
+
+.price-desktop .package-accordions .collapsible:not(:last-child):not(.show) {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.price-desktop .package-accordions .collapse-toggler,
+.price-desktop .package-accordions .plus > div,
+.price-desktop .package-accordions .minus > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-desktop .package-accordions .collapse-toggler {
+  padding: 1vw 0;
+}
+
+.price-desktop .package-accordions .simbol img {
+  width: 1.3vw;
+  margin-right: .75vw;
+}
+
+.price-desktop .package-accordions .collapse > div {
+  padding-bottom: 3.125vw;
+}
+
+.price-desktop .package-row {
+  display: flex;
+}
+
+.price-desktop .package-row:not(:last-child) {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.price-desktop .package-row > * {
+  flex: 0 0 20%;
+  padding: .9vw 0;
+}
+
+.price-desktop .package-option {
+  line-height: 1;
+}
+
+.price-desktop .package-value {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-desktop .package-value:not(:last-child) {
+  border-left: 1px solid #E5E5E5;
+}
+
 @media (max-width: 1023.98px) {
   .price-desktop {
     display: none;
@@ -2233,5 +2417,57 @@ body {
 @media (max-width: 1023.98px) {
   .price-mobile {
     display: block;
+  }
+}
+
+/* #Price Sticky Desktop
+================================================== */
+.price-sticky-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 11000; 
+  display: flex;
+  height: 5.7vw;
+  transform: translateY(-100%);
+  transition: all .6s ease;
+}
+
+.price-sticky-desktop.show {
+  transform: translateY(0);
+}
+
+.price-sticky-desktop a {
+  width: 26.33vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0BE6B8;
+}
+
+.price-sticky-desktop ul {
+  display: flex;
+}
+
+.price-sticky-desktop ul li {
+  flex: 0 0 15.47vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.price-sticky-desktop ul li:not(:last-child) {
+  border-left: 1px solid #E5E5E5;
+}
+
+@media (max-width: 1023.98px) {
+  .price-sticky-desktop {
+    display: none!important;
   }
 }
