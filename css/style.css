@@ -495,6 +495,17 @@ body {
   margin-bottom: 1vw;
 }
 
+/* How It Works Banner */
+.how-it-works-banner .text {
+  margin-right: 6vw;
+}
+
+.how-it-works-banner .text picture,
+.how-it-works-banner .text picture img {
+  width: 32.44vw;
+  margin-bottom: 1vw;
+}
+
 @media (max-width: 1023.98px) {
   .banner .container {
     top: 50%;
@@ -582,6 +593,22 @@ body {
   }
 
   .capabilities-banner .container {
+    top: 31%;
+  }
+
+  /* How It Works Banner */
+  .how-it-works-banner .text {
+    margin-right: 0;
+  }
+
+  .how-it-works-banner .text picture,
+  .how-it-works-banner .text picture img {
+    width: 42.26vw;
+    margin: 0 auto;
+    margin-bottom: 2.66vw;
+  }
+
+  .how-it-works-banner .container {
     top: 31%;
   }
 }
@@ -2623,6 +2650,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .media-box:not(:last-child) {
@@ -2631,6 +2659,15 @@ body {
 
 .media-box:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.media-box .num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F1F4F5;
+  z-index: 10;
 }
 
 .media-box .img,
@@ -2650,14 +2687,45 @@ body {
   margin-bottom: .5vw;
 }
 
+/* How It Works Page */
+.how-it-works-page .media-boxes {
+  position: relative;
+  padding: 5.88vw 0 2vw 0;
+  background-size: 100% auto;
+}
+
+.how-it-works-page .media-boxes::after {
+  content: '';
+  position: absolute;
+  top: 5.88vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 90%;
+  background-color: #D1D1D1;
+}
+
+.media-box:not(:last-child) {
+  margin-bottom: 5.5vw;
+}
+
 @media (max-width: 1023.98px) {
   .media-boxes {
-    background-image: url('../img/capabilities/media-bg-mobile.png');
+    background-image: url('../img/how-it-works/media-bg-mobile.png');
     padding: 21.33vw 0 3.33vw 0;
+  }
+
+  .how-it-works-page .media-boxes {
+    background-image: url('../img/how-it-works/media-bg-mobile.png');
+    padding: 16.66vw 0 3.33vw 0;
   }
   
   .media-boxes .container {
     width: 90%;
+  }
+
+  .how-it-works-page .media-boxes::after {
+    display: none;
   }
   
   .media-box {
@@ -2681,5 +2749,48 @@ body {
   
   .media-box .text h2 {
     margin-bottom: .5vw;
+  }
+
+  /* How It Works Page */
+  .media-box .num {
+    position: static;
+    transform: none;
+    z-index: 10;
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  .how-it-works-page .media-box:not(:last-child) {
+    margin-bottom: 11.33vw;
+  }
+}
+
+/* #How It Works Text
+================================================== */
+.how-it-works-text {
+  background-color: #F1F4F5;
+  text-align: center;
+  padding: 5.2vw 0 7.8vw 0;
+}
+
+.how-it-works-text .container {
+  width: 37%;
+}
+
+.how-it-works-text h2 {
+  margin-bottom: .5vw;
+}
+
+@media (max-width: 1023.98px) {
+  .how-it-works-text {
+    padding: 20vw 0 18vw 0;
+  }
+  
+  .how-it-works-text .container {
+    width: 90%;
+  }
+
+  .how-it-works-text h2 {
+    margin-bottom: 1.5vw;
   }
 }
