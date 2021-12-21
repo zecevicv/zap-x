@@ -431,7 +431,6 @@ body {
   bottom: 2.65vw;
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
-  /* transform-origin: left center; */
   display: flex;
   align-items: center;
 }
@@ -483,6 +482,17 @@ body {
 }
 .home-banner .img-4 img {
   width: 9.5vw;
+}
+
+/* Capabilities Banner */
+.capabilities-banner .text {
+  margin-right: 6vw;
+}
+
+.capabilities-banner .text picture,
+.capabilities-banner .text picture img {
+  width: 28.5vw;
+  margin-bottom: 1vw;
 }
 
 @media (max-width: 1023.98px) {
@@ -557,6 +567,22 @@ body {
   }
   .home-banner .img-4 img {
     width: 18vw;
+  }
+
+  /* Capabilities Banner */
+  .capabilities-banner .text {
+    margin-right: 0;
+  }
+
+  .capabilities-banner .text picture,
+  .capabilities-banner .text picture img {
+    width: 72.93vw;
+    margin: 0 auto;
+    margin-bottom: 3.33vw;
+  }
+
+  .capabilities-banner .container {
+    top: 31%;
   }
 }
 
@@ -2014,6 +2040,17 @@ body {
   padding-bottom: .5vw;
 }
 
+/* Capabilities Page */
+.capabilities-page .price-extras {
+  background-image: none;
+}
+
+.capabilities-page .price-extras .extras-price {
+  margin-bottom: 0;
+  padding-bottom: 2.6vw;
+  margin-top: 0;
+}
+
 @media (max-width: 1023.98px) {
   .price-extras {
     padding: 17.33vw 0 13.33vw 0;
@@ -2057,6 +2094,17 @@ body {
 
   .price-extras .swiper-pagination-bullet-active {
     background: #0BFAC8;
+  }
+
+  /* Capabilities Page */
+  .capabilities-page .price-extras .extras-price {
+    margin-bottom: 0;
+    padding-bottom: 8.93vw;
+    margin-top: 4.66vw;
+  }
+
+  .capabilities-page .price-extras .swiper-slide .text {
+    text-align: right;
   }
 }
 
@@ -2469,5 +2517,169 @@ body {
 @media (max-width: 1023.98px) {
   .price-sticky-desktop {
     display: none!important;
+  }
+}
+
+/* #Capabilities Business
+================================================== */
+.capabilities-business {
+  background-color: #F1F4F5;
+  background-image: url('../img/capabilities/business-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  padding-bottom: 6.77vw;
+  padding-top: 2vw;
+}
+
+.capabilities-business .container {
+  width: 70%;
+}
+
+.capabilities-business .heading {
+  margin: 0 auto;
+  margin-bottom: 2.6vw;
+  width: 31.51vw;
+  text-align: center;
+}
+
+.capabilities-business .body ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1.17vw -1.5vw;
+}
+
+.capabilities-business .body ul li {
+  flex: 0 0 33.333333%;
+  padding: 1.17vw 1.5vw;
+}
+
+.capabilities-business .body img {
+  height: 2.3vw;
+  margin-bottom: 1vw;
+}
+
+.capabilities-business .body h3 {
+  margin-bottom: .15vw;
+}
+
+@media (max-width: 1023.98px) {
+  .capabilities-business {
+    background-image: url('../img/capabilities/business-bg-mobile.png');
+    background-size: contain;
+    background-position: center center;
+    overflow: hidden;
+    padding-bottom: 10vw;
+    padding-top: 5vw;
+  }
+  
+  .capabilities-business .container {
+    width: 90%;
+  }
+  
+  .capabilities-business .heading {
+    margin-bottom: 10vw;
+    width: 100%;
+  }
+  
+  .capabilities-business .body ul {
+    margin: -5vw -6vw;
+  }
+  
+  .capabilities-business .body ul li {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 5vw 6vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .capabilities-business .body img {
+    height: 9.6vw;
+    margin-bottom: 4vw;
+  }
+  
+  .capabilities-business .body h3 {
+    margin-bottom: .15vw;
+  }
+}
+
+/* #Media Boxes
+================================================== */
+.media-boxes {
+  background-color: #F1F4F5;
+  background-image: url('../img/capabilities/media-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  padding: 5.88vw 0 2vw 0;
+}
+
+.media-boxes .container {
+  width: 77%;
+}
+
+.media-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-box:not(:last-child) {
+  margin-bottom: 5.2vw;
+}
+
+.media-box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.media-box .img,
+.media-box .text {
+  flex: 0 0 33.85vw;
+}
+
+.media-box .img img {
+  width: 100%;
+}
+
+.media-box .text {
+  padding: 0 3.9vw;
+}
+
+.media-box .text h2 {
+  margin-bottom: .5vw;
+}
+
+@media (max-width: 1023.98px) {
+  .media-boxes {
+    background-image: url('../img/capabilities/media-bg-mobile.png');
+    padding: 21.33vw 0 3.33vw 0;
+  }
+  
+  .media-boxes .container {
+    width: 90%;
+  }
+  
+  .media-box {
+    display: block;
+  }
+  
+  .media-box:not(:last-child) {
+    margin-bottom: 18.66vw;
+  }
+  
+  .media-box .img,
+  .media-box .text {
+    width: 100%;
+  }
+  
+  .media-box .text {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 6.66vw;
+  }
+  
+  .media-box .text h2 {
+    margin-bottom: .5vw;
   }
 }
